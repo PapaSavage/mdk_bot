@@ -21,12 +21,15 @@ async def start_command(message: types.Message):
                 [
                     "Меню",
                     "",
-                    "https://papasavage.github.io/",
+                    "https://mdk-botstore.vercel.app/" + str(message.from_user.id),
                 ],
-                ["Мои заказы", "", "https://ya.ru/"],
-                ["Профиль", "", "https://ya.ru/"],
-                ["Контакты", "", "https://ya.ru/"],
-                ["Пригласить друзей", "", "https://ya.ru/"],
+                [
+                    "Мои заказы",
+                    "",
+                    "https://mdk-botstore.vercel.app/order/"
+                    + str(message.from_user.id),
+                ],
+                ["Контакты", "", "https://mdk-botstore.vercel.app/about"],
             ]
         ),
     )
