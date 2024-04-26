@@ -15,21 +15,22 @@ dp = Dispatcher(bot)
 async def start_command(message: types.Message):
     await bot.send_message(
         chat_id=message.from_user.id,
-        text="Hello!",
+        text="Добро пожаловать в наш магазин! 🛍️\n\n"
+        "Здесь вы можете просмотреть наш ассортимент товаров, сделать заказ и отследить его статус.\n\n"
+        "Используйте кнопки меню ниже, чтобы начать покупки или проверить ваши заказы. Приятных покупок! 😊",
         reply_markup=kb.keyboard_builder(
             [
                 [
-                    "Меню",
+                    "🛒 Меню",
                     "",
                     "https://mdk-botstore.vercel.app/" + str(message.from_user.id),
                 ],
                 [
-                    "Мои заказы",
+                    "📦 Мои заказы",
                     "",
                     "https://mdk-botstore.vercel.app/order/"
                     + str(message.from_user.id),
                 ],
-                ["Контакты", "", "https://mdk-botstore.vercel.app/about"],
             ]
         ),
     )
